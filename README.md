@@ -35,13 +35,11 @@ To compile the partitioning code just use the command:
 
 make
 
-To run the executable run:
-
-Hypergraph Partitioning:
+To run Hypergraph Partitioning:
 
 ./gcnhgp -a {Par_A} -h {Par_H} -o {Par_O} -k {k} -f {nfeatures} -l {nlayers}  
 
-Graph Partitioning:
+To run Graph Partitioning:
 
 ./gcngp -a {Par_A} -h {Par_H} -o {Par_O} -k {k} -f {nfeatures} -l {nlayers} 
 
