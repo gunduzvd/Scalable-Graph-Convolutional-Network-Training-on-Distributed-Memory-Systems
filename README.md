@@ -26,6 +26,10 @@ python gcn.py -a {FILE_A} -h {FILE_H} -y {FILE_Y} -c {FILE_C}
 
 -c {FILE_C} : path to config file
 
+# CAGNET code for parallel GCN training
+
+
+
 # Graph(GCN-GP) and Hypergraph(GCN-HP) Partitioning Codes
 
 The input matrix partitioning code for parallel GCN training algorithm. The code uses patoh and metis partitioning libraries.
@@ -78,6 +82,10 @@ Parameters:
 -c ${CONFIG_PATH} : *.A.mtx, *.H.mtx, *.Y.mtx and config files.
 
 -t ${NTHREADS} : number of threads per MPI process
+
+
+# Random Hypergraph Model
+
 
 
 
