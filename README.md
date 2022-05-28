@@ -26,9 +26,9 @@ python gcn.py -a {FILE_A} -h {FILE_H} -y {FILE_Y} -c {FILE_C}
 
 -c {FILE_C} : path to config file
 
-# CAGNET code for parallel GCN training
+# CAGNET code for parallel GCN 
 
-The code requires SuiteSparse:GraphBLAS (https://github.com/DrTimothyAldenDavis/GraphBLAS) and MPI libraries. Modify INC_DIR and LIB_DIR variables in the makefile to point correct locations.
+The code requires SuiteSparse:GraphBLAS (https://github.com/DrTimothyAldenDavis/GraphBLAS) and MPI libraries. Modify INC_DIR and LIB_DIR variables in the makefile to point correct locations. It only performs inference phase.
 
 To compile the code just run the command:
 
