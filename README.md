@@ -32,6 +32,11 @@ To run the executable run:
 -h {Par_H} : path to input vertex features 
 
 -o {Par_O} : output folder for partitioned matrices 
+
 -k {k} : Number of partitions 
+
 -f {nfeatures} : number of features per layer 
+
 -l {nlayers} : number of layers 
+
+
