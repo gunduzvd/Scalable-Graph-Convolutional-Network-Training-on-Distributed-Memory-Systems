@@ -25,11 +25,11 @@ make
 
 To run the executable run:
 
-./gcnhgp -a {Par_A} -h {Par_H} -o {Par_O} -k {k} -f {nfeatures} -l {nlayers}
+./gcnhgp -a {Par_A} -h {Par_H} -o {Par_O} -k {k} -f {nfeatures} -l {nlayers} \\
 
--a {Par_A} : path to adjacecny matrix
--h {Par_H} : path to input vertex features
--o {Par_O} : output folder for partitioned matrices
--k {k} : Number of partitions
--f {nfeatures} : number of features per layer
--l {nlayers} : number of layers
+-a {Par_A} : path to adjacecny matrix \\
+-h {Par_H} : path to input vertex features \\
+-o {Par_O} : output folder for partitioned matrices \\
+-k {k} : Number of partitions \\
+-f {nfeatures} : number of features per layer \\
+-l {nlayers} : number of layers \\
