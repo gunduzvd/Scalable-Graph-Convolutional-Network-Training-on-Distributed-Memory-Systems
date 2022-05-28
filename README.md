@@ -10,6 +10,22 @@ python GrB-GNN-IDG.py -i {PATH-TO-FILE} -f {nfeatures} -l {nlayers}
 
 -l {nfeatures} : number of layers
 
+This code produces. *.A.mtx, *.H.mtx, *.Y.mtx and config files.
+
+# DGL implementation of GCN
+
+To run DGL implementataion
+
+python gcn.py -a {FILE_A} -h {FILE_H} -y {FILE_Y} -c {FILE_C}
+
+-a {FILE_A} : path to *.A.mtx
+
+-h {FILE_H} : path to *.H.mtx
+
+-y {FILE_Y} : path to *.Y.mtx
+
+-c {FILE_C} : path to config file
+
 # Graph(GCN-GP) and Hypergraph(GCN-HP) Partitioning Codes
 
 The input matrix partitioning code for parallel GCN training algorithm. The code uses patoh and metis partitioning libraries.
