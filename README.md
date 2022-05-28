@@ -105,6 +105,28 @@ Parameters:
 
 # Random Hypergraph Model
 
+Code for random hypergraph partitioning model. The code simulates mini-bathes and compares random hypergraph model against the baseline. It uses https://github.com/kahypar/kahypar hypergraph partitioning tool which is a good alternative for patoh. To install the dependency use "pip install kahypar==1.1.7"
+
+To run the code
+
+python main.py -p data/com-Amazon/com-Amazon.mtx -k {nparts} -s {nsimulations} -b {batch-szie} -h {nbatches-for-model}
+
+-k {nparts} : Number of partitions
+
+-s {nsimulations} : Number of mini-batches for simulation
+
+-b {batch-szie} : mini-batch size interms of vertices
+
+-h {nbatches-for-model} : number of mini-batches to build random hypergraph model
+
+
+
+
+
+
+
+
+
 
 
 
