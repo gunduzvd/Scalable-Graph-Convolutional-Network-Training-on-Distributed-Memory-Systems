@@ -33,6 +33,8 @@ Graph Partitioning:
 
 ./gcngp -a {Par_A} -h {Par_H} -o {Par_O} -k {k} -f {nfeatures} -l {nlayers} 
 
+Parameters:
+
 -a {Par_A} : path to adjacecny matrix 
 
 -h {Par_H} : path to input vertex features 
