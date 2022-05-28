@@ -36,7 +36,7 @@ make
 
 To run the executable:
 
-mpirun -n {nprocs} cagnet1d -p {DATA_PATH} -c ${CONFIG_PATH} -t ${NTHREADS}
+mpirun -n {nprocs} cagnet1d -p {DATA_PATH} -c {CONFIG_PATH} -t {NTHREADS}
 
 Parameters:
 
@@ -44,9 +44,9 @@ Parameters:
 
 -p {DATA_PATH} : path to folde that contains
 
--c ${CONFIG_PATH} : *.A.mtx, *.H.mtx, *.Y.mtx and config files.
+-c {CONFIG_PATH} : *.A.mtx, *.H.mtx, *.Y.mtx and config files.
 
--t ${NTHREADS} : number of threads per MPI process
+-t {NTHREADS} : number of threads per MPI process
 
 
 # Graph(GCN-GP) and Hypergraph(GCN-HP) Partitioning Codes
@@ -90,7 +90,7 @@ make
 
 To run the executable:
 
-mpirun -n {nprocs} grbgcn -p {DATA_PATH} -c ${CONFIG_PATH} -t ${NTHREADS}
+mpirun -n {nprocs} grbgcn -p {DATA_PATH} -c {CONFIG_PATH} -t {NTHREADS}
 
 Parameters:
 
@@ -98,9 +98,9 @@ Parameters:
 
 -p {DATA_PATH} : path to folde that contains
 
--c ${CONFIG_PATH} : *.A.mtx, *.H.mtx, *.Y.mtx and config files.
+-c {CONFIG_PATH} : *.A.mtx, *.H.mtx, *.Y.mtx and config files.
 
--t ${NTHREADS} : number of threads per MPI process
+-t {NTHREADS} : number of threads per MPI process
 
 
 # Random Hypergraph Model
