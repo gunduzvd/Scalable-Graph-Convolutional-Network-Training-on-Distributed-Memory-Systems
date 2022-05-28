@@ -28,6 +28,25 @@ python gcn.py -a {FILE_A} -h {FILE_H} -y {FILE_Y} -c {FILE_C}
 
 # CAGNET code for parallel GCN training
 
+The code requires SuiteSparse:GraphBLAS (https://github.com/DrTimothyAldenDavis/GraphBLAS) and MPI libraries. Modify INC_DIR and LIB_DIR variables in the makefile to point correct locations.
+
+To compile the code just run the command:
+
+make
+
+To run the executable:
+
+mpirun -n {nprocs} cagnet1d -p {DATA_PATH} -c ${CONFIG_PATH} -t ${NTHREADS}
+
+Parameters:
+
+-n {nprocs} : number of MPI processes
+
+-p {DATA_PATH} : path to folde that contains
+
+-c ${CONFIG_PATH} : *.A.mtx, *.H.mtx, *.Y.mtx and config files.
+
+-t ${NTHREADS} : number of threads per MPI process
 
 
 # Graph(GCN-GP) and Hypergraph(GCN-HP) Partitioning Codes
