@@ -125,7 +125,7 @@ Parameters:
 -t {nthreads} : number of threads per MPI process
 
 
-# Random Hypergraph Model
+# Stochastic Hypergraph Model
 
 Code for random hypergraph partitioning model. The code simulates mini-bathes and compares random hypergraph model against the baseline. It uses https://github.com/kahypar/kahypar hypergraph partitioning tool which is a good alternative for patoh. 
 
@@ -137,10 +137,12 @@ pip install kahypar==1.1.7
 To run the code
 
 ```
-python main.py -p data/com-Amazon/com-Amazon.mtx -k {nparts} -s {nsimulations} -b {batch-size} -h {nbatches-for-model}
+python main.py -p {PATH_A} -k {nparts} -s {nsimulations} -b {batch-size} -h {nbatches-for-model}
 ```
 
 Parameters:
+
+-p {PATH_A}: Path to adj matrix in matrix market format
 
 -k {nparts} : Number of partitions
 
