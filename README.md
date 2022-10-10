@@ -126,7 +126,7 @@ GPU folder stores PyTorch implementation (with NCCL backend) of the proposed par
 
 PGCN.py is the GPU version of the proposed parallel GCN training algorithm. sample execution is as follows:
 
-$ python PGCN.py -a \<path to adj matrix in matrix market format\> -p <path to part vector> -b <nccl|gloo> -s <# of gpus> -l <# of layers> -f <dimension of hidden layers>
+$ python PGCN.py -a {path to adj matrix in matrix market format} -p {path to part vector} -b {nccl|gloo} -s {# of gpus} -l {# of layers} -f {dimension of hidden layers}
 
 PGCN-Accuracy.py is for experiments performed on cora dataset to see if the proposed algorithm affects predictive performance.
 
