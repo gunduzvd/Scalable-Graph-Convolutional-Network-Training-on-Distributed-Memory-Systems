@@ -122,11 +122,19 @@ python main.py -p data/com-Amazon/com-Amazon.mtx -k {nparts} -s {nsimulations} -
 
 # GPU implementation
 
+GPU folder stores PyTorch implementation (with NCCL backend) of the proposed parallel training algorithm.
 
+PGCN.py is the GPU version of the proposed parallel GCN training algorithm. sample execution is as follows:
 
+$ python PGCN.py -a <path to adj matrix in matrix market format> -p <path to part vector> -b <nccl|gloo> -s <# of gpus> -l <~ of layers> -f <dimension of hidden layers>
 
+PGCN-Accuracy.py is for experiments performed on cora dataset to see if the proposed algorithm affects predictive performance.
 
+PGCN-Mini-batch.py achieves mini-batch training instead of full-batch training.
 
+PGAT.py is a sample implementation that demonstrates how graph attention networks can be supported by the proposed partitioning and training algorithm.
+
+pytorch.3node.slurm is sample script that shows how to run the codes by slurm.
 
 
 
