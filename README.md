@@ -137,12 +137,12 @@ pip install kahypar==1.1.7
 To run the code
 
 ```
-python main.py -p {PATH_A} -k {nparts} -s {nsimulations} -b {batch-size} -h {nbatches-for-model}
+python main.py -p {path_a} -k {nparts} -s {nsimulations} -b {batch-size} -h {nbatches-for-model}
 ```
 
 Parameters:
 
--p {PATH_A}: Path to adj matrix in matrix market format
+-p {path_a}: Path to adj matrix in matrix market format
 
 -k {nparts} : Number of partitions
 
