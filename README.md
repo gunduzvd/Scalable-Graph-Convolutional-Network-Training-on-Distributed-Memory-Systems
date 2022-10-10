@@ -120,7 +120,7 @@ python main.py -p data/com-Amazon/com-Amazon.mtx -k {nparts} -s {nsimulations} -
 -h {nbatches-for-model} : number of mini-batches to build random hypergraph model
 
 
-
+# GPU implementation
 
 
 
