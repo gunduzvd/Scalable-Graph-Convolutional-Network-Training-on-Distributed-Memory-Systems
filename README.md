@@ -184,4 +184,7 @@ PGCN-Mini-batch.py achieves mini-batch training instead of full-batch training.
 
 PGAT.py is a sample implementation that demonstrates how graph attention networks can be supported by the proposed partitioning and training algorithm.
 
-pytorch.3node.slurm is sample script that shows how to run the codes by slurm.
+pytorch.3node.slurm is sample script that shows how to run the codes by slurm. It can be used as follows
+```
+sbatch pytorch.3node.slurm -d {dataset} -l {numlayers} -f {hiddendim} -p {"hp"|"gp"|"rp"}
+```
