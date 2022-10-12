@@ -1,4 +1,4 @@
-# Data Preprocessing
+# Data Preprocessing {./preprocess}
 
 Before running partitioning codes, data preprocessing is applied to normalize the adjacency matrix and to produce config files indicating how many features and layers are needed.
 
@@ -34,7 +34,7 @@ Parameters:
 
 -c {FILE_C} : path to config file
 
-# CAGNET code for parallel GCN 
+# CAGNET code for parallel GCN {./Cagnet}
 
 The code requires SuiteSparse:GraphBLAS (https://github.com/DrTimothyAldenDavis/GraphBLAS) and MPI libraries. Modify INC_DIR and LIB_DIR variables in the makefile to point correct locations. It only performs inference phase.
 
@@ -61,7 +61,7 @@ Parameters:
 -t {nthreads} : number of threads per MPI process
 
 
-# Graph(GCN-GP) and Hypergraph(GCN-HP) Partitioning Codes
+# Graph {./GCN-GP} and Hypergraph {./GCN-HP} Partitioning Codes 
 
 The input matrix partitioning code for parallel GCN training algorithm. The code uses patoh and metis partitioning libraries.
 Modify INC_DIR and LIB_DIR to point appropriate locations in makefile.
@@ -98,7 +98,7 @@ Parameters:
 
 -l {nlayers} : number of layers 
 
-# Scalable Graph Convolutional Network Training on Distributed-Memory Systems
+# Scalable Graph Convolutional Network Training on Distributed-Memory Systems {./Parallel-GCN}
 
 The code requires SuiteSparse:GraphBLAS (https://github.com/DrTimothyAldenDavis/GraphBLAS) and MPI libraries. Modify INC_DIR and LIB_DIR variables in the makefile to point correct locations.
 
@@ -125,7 +125,7 @@ Parameters:
 -t {nthreads} : number of threads per MPI process
 
 
-# Stochastic Hypergraph Model
+# Stochastic Hypergraph Model {./RHP}
 
 Code for random hypergraph partitioning model. The code simulates mini-bathes and compares random hypergraph model against the baseline. It uses https://github.com/kahypar/kahypar hypergraph partitioning tool which is a good alternative for patoh. 
 
@@ -153,7 +153,7 @@ Parameters:
 -h {nbatches-for-model} : number of mini-batches to build random hypergraph model
 
 
-# GPU implementation
+# GPU implementation {./GPU}
 
 GPU folder stores PyTorch implementation (with NCCL backend) of the proposed parallel training algorithm.
 
