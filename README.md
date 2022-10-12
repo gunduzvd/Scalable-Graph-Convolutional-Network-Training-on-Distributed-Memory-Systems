@@ -125,7 +125,7 @@ Parameters:
 -t {nthreads} : number of threads per MPI process
 
 
-# Stochastic Hypergraph Model {./RHP}
+# Stochastic Hypergraph Model {./GPU/SHP}
 
 Code for random hypergraph partitioning model. The code simulates mini-bathes and compares random hypergraph model against the baseline. It uses https://github.com/kahypar/kahypar hypergraph partitioning tool which is a good alternative for patoh. 
 
