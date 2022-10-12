@@ -16,50 +16,6 @@ Parameters:
 
 This code produces. *.A.mtx, *.H.mtx, *.Y.mtx and config files.
 
-# DGL implementation of GCN {./DGL}
-
-To run DGL implementation
-
-```
-python gcn.py -a {FILE_A} -h {FILE_H} -y {FILE_Y} -c {FILE_C}
-```
-
-Parameters:
-
--a {FILE_A} : path to *.A.mtx
-
--h {FILE_H} : path to *.H.mtx
-
--y {FILE_Y} : path to *.Y.mtx
-
--c {FILE_C} : path to config file
-
-# CAGNET code for parallel GCN {./Cagnet}
-
-The code requires SuiteSparse:GraphBLAS (https://github.com/DrTimothyAldenDavis/GraphBLAS) and MPI libraries. Modify INC_DIR and LIB_DIR variables in the makefile to point correct locations. It only performs inference phase.
-
-To compile the code just run the command:
-
-```
-make
-```
-
-To run the executable:
-
-```
-mpirun -n {nprocs} cagnet1d -p {DATA_PATH} -c {CONFIG_PATH} -t {nthreads}
-```
-
-Parameters:
-
--n {nprocs} : number of MPI processes
-
--p {DATA_PATH} : path to folder that contains *.A.mtx, *.H.mtx, *.Y.mtx
-
--c {CONFIG_PATH} : path to config file
-
--t {nthreads} : number of threads per MPI process
-
 
 # Graph {./GCN-GP} and Hypergraph {./GCN-HP} Partitioning Codes 
 
@@ -125,33 +81,6 @@ Parameters:
 -t {nthreads} : number of threads per MPI process
 
 
-# Stochastic Hypergraph Model {./GPU/SHP}
-
-Code for random hypergraph partitioning model. The code simulates mini-bathes and compares random hypergraph model against the baseline. It uses https://github.com/kahypar/kahypar hypergraph partitioning tool which is a good alternative for patoh. 
-
-To install the dependency use 
-```
-pip install kahypar==1.1.7
-```
-
-To run the code
-
-```
-python main.py -p {path_a} -k {nparts} -s {nsimulations} -b {batch-size} -h {nbatches-for-model}
-```
-
-Parameters:
-
--p {path_a}: Path to adj matrix in matrix market format
-
--k {nparts} : Number of partitions
-
--s {nsimulations} : Number of mini-batches for simulation
-
--b {batch-size} : mini-batch size interms of vertices
-
--h {nbatches-for-model} : number of mini-batches to build random hypergraph model
-
 
 # GPU implementation {./GPU}
 
@@ -188,3 +117,76 @@ pytorch.3node.slurm is sample script that shows how to run the codes by slurm. I
 ```
 sbatch pytorch.3node.slurm -d {dataset} -l {numlayers} -f {hiddendim} -p {"hp"|"gp"|"rp"}
 ```
+
+
+# Stochastic Hypergraph Model {./GPU/SHP}
+
+Code for random hypergraph partitioning model. The code simulates mini-bathes and compares random hypergraph model against the baseline. It uses https://github.com/kahypar/kahypar hypergraph partitioning tool which is a good alternative for patoh. 
+
+To install the dependency use 
+```
+pip install kahypar==1.1.7
+```
+
+To run the code
+
+```
+python main.py -p {path_a} -k {nparts} -s {nsimulations} -b {batch-size} -h {nbatches-for-model}
+```
+
+Parameters:
+
+-p {path_a}: Path to adj matrix in matrix market format
+
+-k {nparts} : Number of partitions
+
+-s {nsimulations} : Number of mini-batches for simulation
+
+-b {batch-size} : mini-batch size interms of vertices
+
+-h {nbatches-for-model} : number of mini-batches to build random hypergraph model
+
+
+# DGL implementation of GCN {./DGL}
+
+To run DGL implementation
+
+```
+python gcn.py -a {FILE_A} -h {FILE_H} -y {FILE_Y} -c {FILE_C}
+```
+
+Parameters:
+
+-a {FILE_A} : path to *.A.mtx
+
+-h {FILE_H} : path to *.H.mtx
+
+-y {FILE_Y} : path to *.Y.mtx
+
+-c {FILE_C} : path to config file
+
+# CAGNET code for parallel GCN {./Cagnet}
+
+The code requires SuiteSparse:GraphBLAS (https://github.com/DrTimothyAldenDavis/GraphBLAS) and MPI libraries. Modify INC_DIR and LIB_DIR variables in the makefile to point correct locations. It only performs inference phase.
+
+To compile the code just run the command:
+
+```
+make
+```
+
+To run the executable:
+
+```
+mpirun -n {nprocs} cagnet1d -p {DATA_PATH} -c {CONFIG_PATH} -t {nthreads}
+```
+
+Parameters:
+
+-n {nprocs} : number of MPI processes
+
+-p {DATA_PATH} : path to folder that contains *.A.mtx, *.H.mtx, *.Y.mtx
+
+-c {CONFIG_PATH} : path to config file
+
+-t {nthreads} : number of threads per MPI process
