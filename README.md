@@ -16,7 +16,7 @@ Parameters:
 
 This code produces. *.A.mtx, *.H.mtx, *.Y.mtx and config files.
 
-# DGL implementation of GCN
+# DGL implementation of GCN {./DGL}
 
 To run DGL implementation
 
